@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogadores Mais Valiosos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body data-posicao="Attack">
+    <header class="header">
+        <a href="#" class="logo">Análise de dados:</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <img src="../img/menu.png" id="menu-icon">
+            <img src="../img/close.png" id ="close-icon">
+        </label>
+
+        <nav class="navbar">
+            <a href="../index.html" style="--i:0;">Padrão</a>
+            <a href="meio.html" style="--i:2;">Meio de Campo</a>
+            <a href="zagueiro.html" style="--i:3;">Zagueiros</a>
+            <a href="goleiro.html" style="--i:4;">Goleiros</a>
+            <div class="ano-seletor">
+                <label for="ano">Escolha o ano:</label>
+                <select id="ano"></select>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" id="jogadores">
+        
+
+    </div>
+
+    <div id="meuModal" class="modal">
+      <div class="modal-conteudo">
+        <span class="fechar">&times;</span>
+        <img id="modal-img" src="" alt="Imagem do jogador" />
+        <h3 id="modal-titulo"></h3>
+        
+        <p>Posição: Atacante </span></p>
+        <p>⚽ <span id="modal-dif"></span></p>
+        <p><span id="modal-dif1"></span></p>
+        <p>🟨 Cartões amarelos: <span id="modal-cart"></span></p>
+        <p>💰 Valor de mercado: €<span id="modal-valor"></span>m</p>
+      </div>
+    </div>
+
+    
+    <script src="../configs/script1.js"></script>
+
+    <!--<footer>
+        <div id="footer_content">
+            <div id="footer_contacts">
+              <h1>Logo</h1>
+              <p>Textão bom </p>
+
+              <div id="footer_social_media">
+                  <a href="#" class="footer-link" id="linkedin">
+                      <i class="fa-brands fa-linkedin"></i>
+                  </a>
+              </div>
+            </div>
+        </div>
+    </footer> -->
+</body>
+</html>

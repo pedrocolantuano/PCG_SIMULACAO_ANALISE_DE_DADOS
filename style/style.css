@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url('/img/bk.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position : fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#check {
+    display: none;
+}
+
+.navbar {
+    display: flex; /* Adicionado para alinhar itens flexbox */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color : #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 0.5rem;
+    color: #fff;
+    filter: invert(100%);
+    cursor: pointer;
+    display: none;
+}
+
+/* Breakpoint*/
+@media (max-width: 992px){
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+@media (max-width: 768px){
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0,0,0,.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5m 1rem rgba(0,0,0,.1);
+        overflow: hidden;
+        transition: .3s ease;
+        flex-direction: column; /* Para empilhar no mobile */
+        align-items: center; /* Centraliza horizontalmente no mobile */
+    }
+
+    #check:checked~.navbar {
+        height: 20rem; /* Ajustei a altura para acomodar os itens */
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease; /* Corrigi a transição de -3s para .3s */
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+    
+    .ano-seletor {
+        margin-top: 1.5rem; /* Espaçamento para o seletor de ano no mobile */
+        margin-left: 0; /* Remove a margem lateral no mobile */
+    }
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.card{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h3{
+    margin-top: 8px;
+}
+
+.modal {
+  display: none; /* Oculta o modal por padrão */
+  position: fixed; /* Posição fixa na tela */
+  z-index: 1; /* Fica acima de outros elementos */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  padding-top:60px;
+}
+
+/* Conteúdo do Modal */
+.modal-conteudo {
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Botão de fechar */
+.fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ano-seletor {
+    display: flex;
+    align-items: center; /* Centraliza a label e o select verticalmente */
+    gap: 10px;
+    margin-left: 2.5rem; /* Adicionado para espaçar do último link */
+}
+
+.ano-seletor label {
+    color: white; /* Cor do texto da label */
+}
+
+.select, ::picker(select) {
+    appearance: base-select;
+}
