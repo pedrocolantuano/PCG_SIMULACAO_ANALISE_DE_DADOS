@@ -9,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    background: url('../img/bk.jpg');
+    background: url('https://images.pexels.com/photos/3448250/pexels-photo-3448250.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -159,6 +159,7 @@ body {
 
 .card h3{
     margin-top: 8px;
+    color: white;
 }
 
 .modal {
