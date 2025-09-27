@@ -105,6 +105,17 @@ function fecharModal() {
 
 document.querySelector(".fechar").addEventListener('click', fecharModal);
 
+document.addEventListener("DOMContentLoaded", () => {
+    const seletorAno = document.getElementById("ano");
+    const check = document.getElementById("check");
+
+    if (seletorAno && check) {
+        seletorAno.addEventListener("change", () => {
+            check.checked = false; // fecha o menu
+        });
+    }
+});
+
 window.addEventListener('click', (event) => {
     const modal = document.getElementById("meuModal");
     if (event.target === modal) {

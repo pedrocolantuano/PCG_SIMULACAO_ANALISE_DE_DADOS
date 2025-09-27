@@ -24,6 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    gap : 20px;
 }
 
 .header::before {
@@ -72,6 +73,17 @@ body {
     display: none;
 }
 
+.ano-seletor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.ano-seletor label {
+    color: white;
+}
+
 /* Breakpoint*/
 @media (max-width: 992px){
     .header {
@@ -111,7 +123,7 @@ body {
     }
 
     #check:checked~.navbar {
-        height: 20rem; /* Ajustei a altura para acomodar os itens */
+        height: 25rem; /* Ajustei a altura para acomodar os itens */
     }
 
     .navbar a {
@@ -131,8 +143,9 @@ body {
     }
     
     .ano-seletor {
-        margin-top: 1.5rem; /* Espaçamento para o seletor de ano no mobile */
-        margin-left: 0; /* Remove a margem lateral no mobile */
+        position: absolute;
+        top: 1.3rem; /* Espaçamento para o seletor de ano no mobile */
+        right: 60px; /* Remove a margem lateral no mobile */
     }
 }
 
