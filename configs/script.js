@@ -1,5 +1,5 @@
 function carregar(ano) {
-    fetch('./configs/top_players.json')
+    fetch('../configs/top_players.json')
         .then(response => {
             if (!response.ok) { throw new Error('Network response was not ok'); }
             return response.json();
@@ -33,7 +33,7 @@ function carregar(ano) {
 
 function popularSelectAnos() {
     console.log("Tentando popular o seletor de anos...");
-    fetch('./configs/top_players.json')
+    fetch('../configs/top_players.json')
         .then(response => {
             console.log("Resposta do fetch recebida.");
             if (!response.ok) {

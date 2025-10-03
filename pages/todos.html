@@ -9,9 +9,9 @@
   href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body data-posicao="Attack">
+<body>
     <header class="header">
-        <a href="#" class="logo">Análise de dados:</a>
+        <h1 id="h1">Análise de dados:</h1>
 
         <input type="checkbox" id="check">
         <label for="check" class="icons">
@@ -19,8 +19,9 @@
             <img src="../img/close.png" id ="close-icon">
         </label>
 
+
         <nav class="navbar">
-            <a href="todos.html" style="--i:0;">Todos</a>
+            <a href="atacante.html" style="--i:1;">Atacantes</a>
             <a href="meio.html" style="--i:2;">Meio de Campo</a>
             <a href="zagueiro.html" style="--i:3;">Zagueiros</a>
             <a href="goleiro.html" style="--i:4;">Goleiros</a>
@@ -31,6 +32,7 @@
             <label for="ano">Selecione um ano:</label>
             <select id="ano"></select>
     </div>
+
     <div class="container" id="jogadores">
         
 
@@ -42,7 +44,7 @@
         <img id="modal-img" src="" alt="Imagem do jogador" />
         <h3 id="modal-titulo"></h3>
         
-        <p>Posição: Atacante </span></p>
+        <p>Posição: <span id="modal-pos"></span></p>
         <p>⚽ <span id="modal-dif"></span></p>
         <p><span id="modal-dif1"></span></p>
         <p>🟨 Cartões amarelos: <span id="modal-cart"></span></p>
@@ -51,7 +53,7 @@
     </div>
 
     
-    <script src="../configs/script1.js"></script>
+    <script src="../configs/script.js"></script>
 
     <!--<footer>
         <div id="footer_content">

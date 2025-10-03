@@ -1,72 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Jogadores Mais Valiosos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Explicão</title>
 </head>
-<body>
-    <header class="header">
+<body class="explicacao">
+     <header class="header">
         <a href="#" class="logo">Análise de dados:</a>
 
         <input type="checkbox" id="check">
         <label for="check" class="icons">
-            <img src="./img/menu.png" id="menu-icon">
-            <img src="./img/close.png" id ="close-icon">
+            <img src="../img/menu.png" id="menu-icon">
+            <img src="../img/close.png" id ="close-icon">
         </label>
 
-
         <nav class="navbar">
-            <a href="./pages/atacante.html" style="--i:1;">Atacantes</a>
+            <a href="./pages/todos.html" style="--i:0;">Todos</a>
+            <a href="./pages/atacante.html" style="--i:1;">Atacante</a>
             <a href="./pages/meio.html" style="--i:2;">Meio de Campo</a>
             <a href="./pages/zagueiro.html" style="--i:3;">Zagueiros</a>
             <a href="./pages/goleiro.html" style="--i:4;">Goleiros</a>
-            <div class="ano-seletor">
-                <label for="ano">Escolha o ano:</label>
-                <select id="ano"></select>
-            </div>
         </nav>
     </header>
-
-    <div class="container" id="jogadores">
-        
-
-    </div>
-
-    <div id="meuModal" class="modal">
-      <div class="modal-conteudo">
-        <span class="fechar">&times;</span>
-        <img id="modal-img" src="" alt="Imagem do jogador" />
-        <h3 id="modal-titulo"></h3>
-        
-        <p>Posição: <span id="modal-pos"></span></p>
-        <p>⚽ <span id="modal-dif"></span></p>
-        <p><span id="modal-dif1"></span></p>
-        <p>🟨 Cartões amarelos: <span id="modal-cart"></span></p>
-        <p>💰 Valor de mercado: €<span id="modal-valor"></span>m</p>
-      </div>
-    </div>
-
-    
-    <script src="./configs/script.js"></script>
-
-    <!--<footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-              <h1>Logo</h1>
-              <p>Textão bom </p>
-
-              <div id="footer_social_media">
-                  <a href="#" class="footer-link" id="linkedin">
-                      <i class="fa-brands fa-linkedin"></i>
-                  </a>
-              </div>
-            </div>
+    <main class="explicacao">
+        <div class="explicacao">
+            <h1>Introdução ao projeto:</h1>
+            <p>Além de ser o esporte mais jogado do mundo, o futebol tem um mercado multibilionário, em que clubes, investidores e patrocinadores destinam recursos significativos na contratação de atletas. Nesse contexto, a análise de dados surge como ferramenta estratégica, capaz de reduzir a subjetividade das avaliações e oferecer suporte científico às tomadas de decisão. A correlação entre desempenho em campo e valor de mercado do jogador tem se tornado objeto de crescente interesse, visto que a divergência entre investimento e retorno esportivo pode comprometer tanto a performance competitiva quanto a saúde financeira das instituições.
+Segundo Kuper e Szymanski, co-autores do livro “Soccernomics”, clubes que baseiam suas contratações em métricas objetivas tendem a apresentar resultados mais consistentes dentro e fora de campo. A expansão de plataformas de dados como FBref, Transfermarkt e WhoScored possibilitou o acesso democrático a estatísticas avançadas, permitindo a construção de análises mais precisas sobre o desempenho individual e coletivo. Além disso, o avanço das técnicas de ciência de dados abre espaço para a criação de modelos de previsão que auxiliam na identificação de jogadores com maior potencial de retorno esportivo financeiro.
+Apesar dos avanços, ainda há falhas sobre como diferentes variáveis como posição, idade, ligas disputadas e fatores subjetivos influenciam na valorização de jogadores. A investigação sistemática dessas relações torna-se, portanto, fundamental para compreender os padrões do mercado e propor soluções mais racionais para a gestão esportiva.
+Desta forma, o presente trabalho busca aprofundar a análise iniciada em temporadas passadas, utilizando métodos de exploração estatística, modelagem preditiva e storytelling com dados para avaliar a relação entre desempenho, valor de mercado e potencial de investimento em jogadores de futebol.
+</p>
         </div>
-    </footer> -->
+    </main>
 </body>
 </html>

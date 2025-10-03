@@ -9,13 +9,15 @@
 
 body {
     min-height: 100vh;
-    background: url('https://images.pexels.com/photos/3448250/pexels-photo-3448250.jpeg');
-    background-size: cover;
+    background-color: #6a994e;
     background-position: center;
 }
 
 .header {
-    position : fixed;
+    h1{
+        color: #ffffff;
+    }
+    position : sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,6 +27,22 @@ body {
     align-items: center;
     z-index: 100;
     gap : 20px;
+    
+}
+.ano-seletor {
+    color: white; /* Cor do texto da label */
+    font-family: "Poppins", sans-serif;
+    font-size: 200%;
+    margin-top: 5%;
+    margin-left: 1vw;
+}
+
+.ano-seletor select {
+    font-size: 75%;
+}
+
+.select, ::picker(select) {
+    appearance: base-select;
 }
 
 .header::before {
@@ -53,6 +71,7 @@ body {
 .navbar {
     display: flex; /* Adicionado para alinhar itens flexbox */
     align-items: center; /* Centraliza verticalmente os itens */
+
 }
 
 .navbar a {
@@ -71,17 +90,6 @@ body {
     filter: invert(100%);
     cursor: pointer;
     display: none;
-}
-
-.ano-seletor {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-}
-
-.ano-seletor label {
-    color: white;
 }
 
 /* Breakpoint*/
@@ -141,12 +149,6 @@ body {
         opacity: 1;
         transition-delay: calc(.15s * var(--i));
     }
-    
-    .ano-seletor {
-        position: absolute;
-        top: 1.3rem; /* Espaçamento para o seletor de ano no mobile */
-        right: 60px; /* Remove a margem lateral no mobile */
-    }
 }
 
 .container{
@@ -163,6 +165,8 @@ body {
     width: 200px;
     text-align: center;
     box-sizing: border-box;
+    background-color: #386641;
+
 }
 
 .card img{
@@ -172,7 +176,7 @@ body {
 
 .card h3{
     margin-top: 8px;
-    color: white;
+    color: #ffffff;
 }
 
 .modal {
@@ -214,17 +218,21 @@ body {
   cursor: pointer;
 }
 
-.ano-seletor {
-    display: flex;
-    align-items: center; /* Centraliza a label e o select verticalmente */
-    gap: 10px;
-    margin-left: 2.5rem; /* Adicionado para espaçar do último link */
-}
 
-.ano-seletor label {
-    color: white; /* Cor do texto da label */
-}
 
-.select, ::picker(select) {
-    appearance: base-select;
+
+  
+main.explicacao{
+    h1{
+        text-align: center;
+        color: white;
+    }
+    p{
+        font-size: 1.5rem;
+        margin-top: 2vw;
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: justify;
+        color: rgb(255, 255, 255);
+    }
 }
