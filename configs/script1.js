@@ -4,6 +4,7 @@ function carregar(ano) {
     fetch('../configs/top_positions.json')
         .then(response => response.json())
         .then(dados => {
+            var cont = 0;
             const container = document.querySelector("#jogadores");
             container.innerHTML = '';
 
@@ -18,6 +19,7 @@ function carregar(ano) {
             const jogadoresDoAno = listaDeJogadoresDaPosicao.filter(jogador => jogador.year === ano);
             
             jogadoresDoAno.forEach(jogador => {
+                cont += 1;
                 const card = document.createElement("div");
                 card.classList.add("card");
                 const img = document.createElement("img");
@@ -25,6 +27,9 @@ function carregar(ano) {
                 img.alt = jogador.player_name;
                 const titulo = document.createElement("h3");
                 titulo.textContent = jogador.player_name.replace(/[\d()]/g, '').trim();
+                const rank = document.createElement("h2");
+                rank.textContent = cont;
+                card.appendChild(rank);
                 card.appendChild(img);
                 card.appendChild(titulo);
                 card.addEventListener('click', () => abrirModal(jogador));

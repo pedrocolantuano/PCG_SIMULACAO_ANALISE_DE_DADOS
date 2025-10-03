@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
     background-color: #6a994e;
     background-position: center;
+    h2{
+        color: #ffffff;
+        margin-left: 1vw;
+        margin-bottom: -2%;
+    }
 }
 
 .header {
@@ -28,6 +33,9 @@ body {
     z-index: 100;
     gap : 20px;
     
+}
+.header img{
+    width: 60px;
 }
 .ano-seletor {
     color: white; /* Cor do texto da label */
@@ -80,6 +88,12 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 2.5rem;
+}
+
+.navbar .navegavel:focus {
+  outline: 3px solid rgba(255,255,255,0.9);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .icons {
@@ -159,6 +173,7 @@ body {
 }
 
 .card{
+    position: relative;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
@@ -166,7 +181,22 @@ body {
     text-align: center;
     box-sizing: border-box;
     background-color: #386641;
+}
 
+.card h2{
+    position: absolute;
+    top: 4%;   /* distância do topo */
+    left: 70%;  /* distância da esquerda */
+    color: white;
+    background-color: black;
+    border: 0.4px solid black;
+    border-radius: 50%;
+    width: 25px;        /* largura fixa pro círculo */
+    height: 25px;       /* altura fixa pro círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza o número dentro do círculo */
+    font-size: 14px;
 }
 
 .card img{

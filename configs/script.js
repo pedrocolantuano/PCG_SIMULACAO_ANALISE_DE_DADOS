@@ -5,10 +5,12 @@ function carregar(ano) {
             return response.json();
         })//passa o erro pro catch caso tenha
         .then(dados => {
+            var cont = 0;
             const container = document.querySelector("#jogadores");
             container.innerHTML = '';
             const jogadoresDoAno = dados.filter(jogador => jogador.year === ano);// filtra todos os jogadores pelo ano
             jogadoresDoAno.forEach(jogador => {
+                cont += 1;
                 const card = document.createElement("div");
                 card.classList.add("card");
                 const img = document.createElement("img");
@@ -17,7 +19,10 @@ function carregar(ano) {
                 const titulo = document.createElement("h3");
                 const tit = jogador.player_name;
                 const nomeLimpo = tit.replace(/[\d()]/g, '').trim();
+                const rank = document.createElement("h2");
+                rank.textContent = cont;
                 titulo.textContent = nomeLimpo;
+                card.appendChild(rank)
                 card.appendChild(img);
                 card.appendChild(titulo);
                 card.addEventListener('click', () => {
@@ -122,3 +127,6 @@ window.addEventListener('click', (event) => {
         fecharModal();
     }
 });
+
+
+

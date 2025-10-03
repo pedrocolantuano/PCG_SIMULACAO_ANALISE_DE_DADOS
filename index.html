@@ -8,7 +8,7 @@
 </head>
 <body class="explicacao">
      <header class="header">
-        <a href="#" class="logo">Análise de dados:</a>
+        <h1>Análise de dados: </h1>
 
         <input type="checkbox" id="check">
         <label for="check" class="icons">
@@ -17,23 +17,28 @@
         </label>
 
         <nav class="navbar">
-            <a href="./pages/todos.html" style="--i:0;">Todos</a>
-            <a href="./pages/atacante.html" style="--i:1;">Atacante</a>
-            <a href="./pages/meio.html" style="--i:2;">Meio de Campo</a>
-            <a href="./pages/zagueiro.html" style="--i:3;">Zagueiros</a>
-            <a href="./pages/goleiro.html" style="--i:4;">Goleiros</a>
+            <a href="./pages/todos.html" style="--i:0;" class="navegavel" tabindex="0">Todos</a>
+            <a href="./pages/atacante.html" style="--i:1;" class="navegavel" >Atacante</a>
+            <a href="./pages/meio.html" style="--i:2;" class="navegavel" >Meio de Campo</a>
+            <a href="./pages/zagueiro.html" style="--i:3;" class="navegavel" >Zagueiros</a>
+            <a href="./pages/goleiro.html" style="--i:4;" class="navegavel" >Goleiros</a>
+            <a href="#" class="navegavel" onclick="acessibilidade('intro')">
+                <img class="navegavel" src="https://matriz.rs.gov.br/upload/recortes/202202/07145744_9079_GDO.png" alt="ler intrudoção">
+            </a>
         </nav>
     </header>
     <main class="explicacao">
         <div class="explicacao">
-            <h1>Introdução ao projeto:</h1>
-            <p>Além de ser o esporte mais jogado do mundo, o futebol tem um mercado multibilionário, em que clubes, investidores e patrocinadores destinam recursos significativos na contratação de atletas. Nesse contexto, a análise de dados surge como ferramenta estratégica, capaz de reduzir a subjetividade das avaliações e oferecer suporte científico às tomadas de decisão. A correlação entre desempenho em campo e valor de mercado do jogador tem se tornado objeto de crescente interesse, visto que a divergência entre investimento e retorno esportivo pode comprometer tanto a performance competitiva quanto a saúde financeira das instituições.</p> 
-            <p>
+            <h1 id = "titulo">Introdução ao projeto:</h1>
+            <p class="paragrafo">Além de ser o esporte mais jogado do mundo, o futebol tem um mercado multibilionário, em que clubes, investidores e patrocinadores destinam recursos significativos na contratação de atletas. Nesse contexto, a análise de dados surge como ferramenta estratégica, capaz de reduzir a subjetividade das avaliações e oferecer suporte científico às tomadas de decisão. A correlação entre desempenho em campo e valor de mercado do jogador tem se tornado objeto de crescente interesse, visto que a divergência entre investimento e retorno esportivo pode comprometer tanto a performance competitiva quanto a saúde financeira das instituições.</p> 
+            <p class="paragrafo">
 Segundo Kuper e Szymanski, co-autores do livro “Soccernomics”, clubes que baseiam suas contratações em métricas objetivas tendem a apresentar resultados mais consistentes dentro e fora de campo. A expansão de plataformas de dados como FBref, Transfermarkt e WhoScored possibilitou o acesso democrático a estatísticas avançadas, permitindo a construção de análises mais precisas sobre o desempenho individual e coletivo. Além disso, o avanço das técnicas de ciência de dados abre espaço para a criação de modelos de previsão que auxiliam na identificação de jogadores com maior potencial de retorno esportivo financeiro.</p>
-<p>Apesar dos avanços, ainda há falhas sobre como diferentes variáveis como posição, idade, ligas disputadas e fatores subjetivos influenciam na valorização de jogadores. A investigação sistemática dessas relações torna-se, portanto, fundamental para compreender os padrões do mercado e propor soluções mais racionais para a gestão esportiva.
+<p class="paragrafo">Apesar dos avanços, ainda há falhas sobre como diferentes variáveis como posição, idade, ligas disputadas e fatores subjetivos influenciam na valorização de jogadores. A investigação sistemática dessas relações torna-se, portanto, fundamental para compreender os padrões do mercado e propor soluções mais racionais para a gestão esportiva.
 Desta forma, o presente trabalho busca aprofundar a análise iniciada em temporadas passadas, utilizando métodos de exploração estatística, modelagem preditiva e storytelling com dados para avaliar a relação entre desempenho, valor de mercado e potencial de investimento em jogadores de futebol.
 </p>
         </div>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=RUUuBWc0"></script>
+        <script src="./configs/acessibilidade.js"></script>
     </main>
 </body>
 </html>
